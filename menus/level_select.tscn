@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw1rdkwgnsl8j"]
+
+[ext_resource type="Script" path="res://level_select.gd" id="1_kskts"]
+
+[node name="Level Select" type="Node2D"]
+script = ExtResource("1_kskts")
+metadata/_edit_lock_ = true
+
+[node name="Level One" type="Button" parent="."]
+offset_left = -1.0
+offset_right = 84.0
+offset_bottom = 31.0
+text = "Level One"
+
+[node name="Level Three" type="Button" parent="."]
+offset_left = -1.0
+offset_top = 83.0
+offset_right = 96.0
+offset_bottom = 114.0
+text = "Level Three
+"
+
+[node name="Level Two" type="Button" parent="."]
+offset_left = 1.0
+offset_top = 40.0
+offset_right = 86.0
+offset_bottom = 71.0
+text = "Level Two"
+
+[node name="Level Four" type="Button" parent="."]
+offset_left = 1.0
+offset_top = 125.0
+offset_right = 89.0
+offset_bottom = 156.0
+text = "Level Four"
+
+[node name="Level Five" type="Button" parent="."]
+offset_left = 3.0
+offset_top = 166.0
+offset_right = 87.0
+offset_bottom = 197.0
+text = "Level Five"
+
+[connection signal="pressed" from="Level One" to="." method="_on_level_one_pressed"]
