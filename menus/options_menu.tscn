@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://6aut7uon47nm"]
+
+[node name="Options_menu" type="Node2D"]
+
+[node name="Sound Settings" type="Button" parent="."]
+offset_right = 123.0
+offset_bottom = 31.0
+text = "Sound Settings"
+
+[node name="Resultion Settings" type="Button" parent="."]
+offset_top = 60.0
+offset_right = 147.0
+offset_bottom = 91.0
+text = "Resultion Settings"
+
+[node name="30 FPS" type="Button" parent="."]
+offset_top = 122.0
+offset_right = 58.0
+offset_bottom = 153.0
+text = "30 FPS"
+
+[node name="60 FPS" type="Button" parent="."]
+offset_left = 81.0
+offset_top = 122.0
+offset_right = 139.0
+offset_bottom = 153.0
+text = "60 FPS
+"
+
+[node name="Uncapped FPS" type="Button" parent="."]
+offset_left = 171.0
+offset_top = 122.0
+offset_right = 289.0
+offset_bottom = 153.0
+text = "Uncapped FPS"
