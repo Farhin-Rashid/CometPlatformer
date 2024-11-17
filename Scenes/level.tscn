@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://coflyv2k3lpgu"]
+[gd_scene load_steps=10 format=3 uid="uid://coflyv2k3lpgu"]
 
 [ext_resource type="PackedScene" uid="uid://dw7cavy56burq" path="res://Scenes/player.tscn" id="1_1waro"]
-[ext_resource type="Script" path="res://Scenes/level.gd" id="1_nb0pd"]
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_hc07v"]
 [ext_resource type="Texture2D" uid="uid://bxytgwpocytnx" path="res://Sprites/tileset.png" id="2_elkwx"]
 [ext_resource type="PackedScene" uid="uid://bfolbx2iv2qrf" path="res://Scenes/fan.tscn" id="3_jlmn3"]
+[ext_resource type="PackedScene" uid="uid://edg1pdfr8iu4" path="res://Scenes/unstable_platform.tscn" id="5_gsaam"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3ykc"]
 texture = ExtResource("2_elkwx")
@@ -85,11 +86,11 @@ texture_region_size = Vector2i(20, 20)
 
 [sub_resource type="TileSet" id="TileSet_t1143"]
 tile_size = Vector2i(20, 20)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_wwmbc")
 
 [node name="level" type="Node2D"]
-script = ExtResource("1_nb0pd")
+script = ExtResource("1_hc07v")
 
 [node name="Background" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_yc5kp")
@@ -116,3 +117,6 @@ position = Vector2(2, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_1waro")]
 position = Vector2(122, 243)
+
+[node name="Unstable Platform" parent="." instance=ExtResource("5_gsaam")]
+position = Vector2(253, 453)
