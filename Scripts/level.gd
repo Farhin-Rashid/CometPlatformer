@@ -14,4 +14,13 @@ func _ready():
 func _process(delta):
 	if player.global_position.y > killZone.global_position.y:
 		# print("dead")
-		player.global_position = respawnLocation
+		reset_player()
+		
+func reset_player():
+	player.global_position = respawnLocation
+	player.velocity = Vector2.ZERO
+
+
+func _on_player_hit_spike():
+	reset_player()
+	pass # Replace with function body.

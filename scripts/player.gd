@@ -19,6 +19,8 @@ var canJump : bool = false
 var posFanAcceleration : Vector2 = Vector2.ZERO
 var negFanAcceleration : Vector2 = Vector2.ZERO
 
+signal hitSpike
+
 func _physics_process(delta):
 	if is_on_floor():
 		canJump = true
@@ -89,3 +91,8 @@ func cancel_wind(direction):
 		posFanAcceleration.x = 0
 	elif direction == LEFT:
 		negFanAcceleration.x = 0
+
+
+func _on_hitbox_body_entered(body):
+	hitSpike.emit()
+	pass # Replace with function body.
