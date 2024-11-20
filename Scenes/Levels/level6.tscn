@@ -132,7 +132,7 @@ size = Vector2(1195, 20)
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_ehyoo")
-nextLevelNum = 1
+nextLevelNum = 7
 
 [node name="Background" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_yc5kp")
@@ -192,6 +192,7 @@ position = Vector2(-35, 599)
 rotation = 1.5708
 scale = Vector2(6, 6)
 fan_time = 1.0
+particle = 300
 isPermanent = true
 
 [node name="Fan2" parent="." instance=ExtResource("5_fggnj")]
@@ -199,6 +200,7 @@ position = Vector2(-124, 25)
 rotation = 1.5708
 scale = Vector2(3, 3)
 fan_force = 15000.0
+particle = 500
 
 [node name="Crusher" parent="." instance=ExtResource("6_1p1cf")]
 position = Vector2(358, 358)

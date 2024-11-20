@@ -196,6 +196,7 @@ position = Vector2(-13, 519)
 rotation = 1.5708
 scale = Vector2(5, 5)
 fan_time = 5.0
+particle = 250
 
 [connection signal="hitSpike" from="Player" to="." method="_on_player_hit_spike"]
 [connection signal="body_entered" from="Warp Zone" to="." method="_on_warp_zone_body_entered"]

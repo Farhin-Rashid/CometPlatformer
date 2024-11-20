@@ -7,6 +7,8 @@ const LEFT : int = 3
 
 @export var fan_force : float = 5000
 @export var fan_time : float = 3.5
+@export var particle : int = 50
+@export var particleSpeed : int = 1
 @export var isPermanent : bool = false
 
 @onready var particles : GPUParticles2D = get_node("Particles")
@@ -21,7 +23,8 @@ func _ready():
 	zone = %"Air Zone"
 	direction = ceili((rotation_degrees - 5) / 90)
 	var scaleValue = transform.get_scale().x
-	particles.amount *= (scaleValue / 2)
+	particles.amount = particle
+	particles.speed_scale = particleSpeed
 	particles.process_material.scale_min = scaleValue
 	particles.process_material.scale_max = scaleValue + 1
 	timer.wait_time = fan_time
