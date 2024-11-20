@@ -7,6 +7,7 @@ const LEFT : int = 3
 
 @export var fan_force : float = 5000
 @export var fan_time : float = 3.5
+@export var isPermanent : bool = false
 
 @onready var particles : GPUParticles2D = get_node("Particles")
 @onready var timer : Timer = get_node("Timer")
@@ -32,8 +33,9 @@ func _process(delta):
 				body.apply_wind(direction, fan_force)
 
 func toggle():
-	isActive = not isActive
-	particles.emitting = not particles.emitting
+	if not isPermanent:
+		isActive = not isActive
+		particles.emitting = not particles.emitting
 
 func _on_air_zone_body_exited(body):
 	if body.has_method("cancel_wind"):
