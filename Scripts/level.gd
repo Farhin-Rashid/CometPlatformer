@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var nextLevelNum : int = 2
 @onready var player : CharacterBody2D
 @onready var killZone : Node2D = get_node("Kill Zone")
 @onready var spawnPoint : Node2D = get_node("Respawn")
@@ -20,7 +21,10 @@ func reset_player():
 	player.global_position = respawnLocation
 	player.velocity = Vector2.ZERO
 
-
 func _on_player_hit_spike():
 	reset_player()
-	pass # Replace with function body.
+	
+func _on_warp_zone_body_entered(body):
+	var nextLevel : Node = load("res://Scenes/Levels/level" + str(nextLevelNum) + ".tscn").instantiate()
+	get_tree().root.call_deferred("add_child", nextLevel)
+	queue_free()

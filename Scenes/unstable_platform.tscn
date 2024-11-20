@@ -7,7 +7,7 @@
 size = Vector2(128, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cooia"]
-size = Vector2(128, 6)
+size = Vector2(122, 2)
 
 [node name="Unstable Platform" type="StaticBody2D"]
 collision_layer = 2
@@ -21,18 +21,18 @@ texture = ExtResource("1_hst03")
 shape = SubResource("RectangleShape2D_yhk4g")
 
 [node name="Break Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.75
 one_shot = true
 
 [node name="Repair Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 3.0
 one_shot = true
 
 [node name="Break Region" type="Area2D" parent="."]
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Break Region"]
-position = Vector2(0, -19)
+position = Vector2(0, -17)
 shape = SubResource("RectangleShape2D_cooia")
 
 [connection signal="timeout" from="Break Timer" to="." method="_on_break_timer_timeout"]

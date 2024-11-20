@@ -6,7 +6,11 @@ const DOWN : int = 2
 const LEFT : int = 3
 
 @export var fan_force : float = 5000
+@export var fan_time : float = 3.5
+
 @onready var particles : GPUParticles2D = get_node("Particles")
+@onready var timer : Timer = get_node("Timer")
+
 var zone : Area2D
 var direction : int = 0
 var isActive : bool = true
@@ -19,6 +23,7 @@ func _ready():
 	particles.amount *= (scaleValue / 2)
 	particles.process_material.scale_min = scaleValue
 	particles.process_material.scale_max = scaleValue + 1
+	timer.wait_time = fan_time
 
 func _process(delta):
 	if isActive:

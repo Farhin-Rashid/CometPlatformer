@@ -6,9 +6,10 @@ extends StaticBody2D
 @onready var sprite : Sprite2D = get_node("Sprite2D")
 
 var isBroken : bool = false
-	
+
 func initiate_break():
 	breakTimer.start()
+	sprite.modulate = Color.FIREBRICK
 	
 func initiate_repiar():
 	repairTimer.start()
@@ -17,6 +18,7 @@ func _on_break_timer_timeout():
 	isBroken = true
 	collider.disabled = true
 	sprite.visible = false
+	sprite.modulate = Color.WHITE
 	initiate_repiar()
 
 func _on_repair_timer_timeout():

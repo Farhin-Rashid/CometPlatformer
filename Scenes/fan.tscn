@@ -35,7 +35,7 @@ process_material = SubResource("ParticleProcessMaterial_n0djp")
 lifetime = 3.0
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 2.5
 autostart = true
 
 [connection signal="body_exited" from="Air Zone" to="." method="_on_air_zone_body_exited"]
