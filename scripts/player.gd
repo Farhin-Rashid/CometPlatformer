@@ -95,4 +95,6 @@ func cancel_wind(direction):
 
 func _on_hitbox_body_entered(body):
 	hitSpike.emit()
-	pass # Replace with function body.
+
+func _on_hitbox_area_entered(area):
+	hitSpike.emit()
