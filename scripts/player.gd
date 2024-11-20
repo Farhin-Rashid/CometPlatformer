@@ -11,10 +11,14 @@ const RIGHT : int = 1
 const DOWN : int = 2
 const LEFT : int = 3
 
+@onready var sprite : AnimatedSprite2D = get_node("AnimatedSprite2D")
+
 var gravity : float = 300
 var gravityMultiplier : float = 1.0
 var jumpBufferCounter : float = 0.0
 var canJump : bool = false
+var isMoving : bool = false
+var flipSprite : bool = false
 
 var posFanAcceleration : Vector2 = Vector2.ZERO
 var negFanAcceleration : Vector2 = Vector2.ZERO
@@ -47,8 +51,23 @@ func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		isMoving = true
+		flipSprite = direction < 0
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		isMoving = false
+		
+	if not is_on_floor():
+		sprite.play("air")
+	elif isMoving:
+		sprite.play("run")
+	else:
+		sprite.play("default")
+		
+	if flipSprite:
+		sprite.flip_h = true
+	else:
+		sprite.flip_h = false
 		
 	# handle fan forces
 	velocity.x += posFanAcceleration.x * delta
