@@ -184,7 +184,7 @@ position = Vector2(587.5, 0)
 shape = SubResource("RectangleShape2D_otxso")
 
 [node name="Fan" parent="." instance=ExtResource("5_q84ig")]
-position = Vector2(-28, 190)
+position = Vector2(-30, 148)
 rotation = 1.5708
 scale = Vector2(6, 6)
 particle = 300

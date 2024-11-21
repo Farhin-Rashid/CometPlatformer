@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://edg1pdfr8iu4"]
 
 [ext_resource type="Script" path="res://Scripts/unstable_platform.gd" id="1_4q864"]
-[ext_resource type="Texture2D" uid="uid://dwmjk6u66c8b2" path="res://icon.svg" id="1_hst03"]
+[ext_resource type="Texture2D" uid="uid://dmxmrs3es4sws" path="res://Sprites/broken_platform.png" id="2_hnhtc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yhk4g"]
 size = Vector2(128, 32)
@@ -14,8 +14,9 @@ collision_layer = 16
 script = ExtResource("1_4q864")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 0.25)
-texture = ExtResource("1_hst03")
+position = Vector2(-7.62939e-06, -4.76837e-07)
+scale = Vector2(2.13333, 1.6)
+texture = ExtResource("2_hnhtc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_yhk4g")

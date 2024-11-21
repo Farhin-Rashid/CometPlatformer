@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b4o68bupri4yr"]
 
 [ext_resource type="Script" path="res://Scripts/crusher.gd" id="1_288t3"]
-[ext_resource type="Texture2D" uid="uid://dwmjk6u66c8b2" path="res://icon.svg" id="1_ps6ah"]
+[ext_resource type="Texture2D" uid="uid://d3utmodyn3yyx" path="res://Sprites/crusher.png" id="2_j5yfg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_36hge"]
 size = Vector2(127, 127)
@@ -18,7 +18,9 @@ collision_mask = 2
 script = ExtResource("1_288t3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ps6ah")
+position = Vector2(0.999998, 1.31182)
+scale = Vector2(2.13333, 2.11039)
+texture = ExtResource("2_j5yfg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -0.5)
