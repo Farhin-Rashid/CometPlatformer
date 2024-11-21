@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c38ygn1w0jpw5"
-path="res://.godot/imported/slime.png-a138e6034c9751e2f08021b7adbf8f72.ctex"
+uid="uid://d3utmodyn3yyx"
+path="res://.godot/imported/crusher.png-0f2fb77f86c04df8bb2cf52a4876afcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dummy sprite/slime.png"
-dest_files=["res://.godot/imported/slime.png-a138e6034c9751e2f08021b7adbf8f72.ctex"]
+source_file="res://Sprites/crusher.png"
+dest_files=["res://.godot/imported/crusher.png-0f2fb77f86c04df8bb2cf52a4876afcf.ctex"]
 
 [params]
 
